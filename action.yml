@@ -32,7 +32,7 @@ inputs:
   stack name:
     description: "Stack name of the cloud backend to use"
     required: false
-    default: bifravst
+    default: asset-tracker
   firmware ci device id:
     description: "ID of the IoT Thing which runs the job"
     required: true

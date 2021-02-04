@@ -1,5 +1,5 @@
 {
-  "name": "@bifravst/firmware-ci-schedule-action-aws",
+  "name": "@nordicsemiconductor/cloud-aws-firmware-ci-schedule-action",
   "version": "0.0.0-development",
   "description": "GitHub action that schedules a CI run on Firmware CI Runner for AWS",
   "scripts": {
@@ -7,44 +7,44 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bifravst/firmware-ci-schedule-action-aws.git"
+    "url": "https://github.com/NordicSemiconductor/cloud-aws-firmware-ci-schedule-action.git"
   },
   "bugs": {
-    "url": "https://github.com/bifravst/firmware-ci-schedule-action-aws/issues"
+    "url": "https://github.com/NordicSemiconductor/cloud-aws-firmware-ci-schedule-action/issues"
   },
-  "homepage": "https://bifravst.github.io/",
+  "homepage": "https://github.com/NordicSemiconductor/cloud-aws-firmware-ci-schedule-action#readme",
   "keywords": [
     "Cloud",
     "IoT",
-    "bifravst",
-    "Asset Tracker",
-    "NordicSemiconductor"
+    "Asset Tracker Cloud Example",
+    "Nordic Semiconductor"
   ],
   "author": "Nordic Semiconductor ASA | nordicsemi.no",
   "license": "BSD-3-Clause",
   "dependencies": {
     "@actions/core": "1.2.6",
-    "@aws-sdk/client-cloudformation": "3.3.0",
-    "@aws-sdk/client-iot-data-plane": "3.3.0",
-    "@aws-sdk/client-s3": "3.3.0",
-    "@aws-sdk/client-sts": "3.3.0",
-    "@aws-sdk/protocol-http": "3.3.0",
-    "@bifravst/aws": "20.2.6",
-    "@bifravst/cloudformation-helpers": "5.0.2",
-    "@bifravst/firmware-ci-runner-aws": "2.1.13",
+    "@aws-sdk/client-cloudformation": "3.4.1",
+    "@aws-sdk/client-iot": "^3.4.1",
+    "@aws-sdk/client-iot-data-plane": "3.4.1",
+    "@aws-sdk/client-s3": "3.4.1",
+    "@aws-sdk/client-sts": "3.4.1",
+    "@aws-sdk/protocol-http": "3.4.1",
+    "@nordicsemiconductor/asset-tracker-cloud-aws": "21.2.0",
+    "@nordicsemiconductor/cloudformation-helpers": "6.0.2",
+    "@nordicsemiconductor/firmware-ci-runner-aws": "5.0.0",
     "node-fetch": "2.6.1",
     "uuid": "8.3.2"
   },
   "devDependencies": {
-    "@bifravst/code-style": "8.0.134",
-    "@bifravst/eslint-config-typescript": "5.0.89",
     "@commitlint/cli": "11.0.0",
     "@commitlint/config-angular": "11.0.0",
-    "@types/node": "14.14.22",
+    "@nordicsemiconductor/asset-tracker-cloud-code-style": "9.0.2",
+    "@nordicsemiconductor/eslint-config-asset-tracker-cloud-typescript": "7.0.1",
+    "@types/node": "14.14.25",
     "@types/node-fetch": "2.5.8",
     "@types/uuid": "8.3.0",
     "@vercel/ncc": "0.27.0",
-    "eslint": "7.18.0",
+    "eslint": "7.19.0",
     "husky": "4.3.8",
     "lint-staged": "10.5.3",
     "prettier": "2.2.1",

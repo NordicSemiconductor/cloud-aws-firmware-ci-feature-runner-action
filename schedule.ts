@@ -6,7 +6,7 @@ import {
 	caFileLocations,
 	createCA,
 	createDeviceCertificate,
-} from '@bifravst/aws'
+} from '@nordicsemiconductor/asset-tracker-cloud-aws'
 import {
 	IoTClient,
 	DescribeThingCommand,
@@ -23,12 +23,16 @@ import {
 	IoTDataPlaneClient,
 	GetThingShadowCommand,
 } from '@aws-sdk/client-iot-data-plane'
-import { schedule, wait, cancel } from '@bifravst/firmware-ci-runner-aws'
+import {
+	schedule,
+	wait,
+	cancel,
+} from '@nordicsemiconductor/firmware-ci-runner-aws'
 import fetch from 'node-fetch'
 import { v4 } from 'uuid'
 import { TextDecoder } from 'util'
 import { HttpRequest } from '@aws-sdk/protocol-http'
-import { stackOutput } from '@bifravst/cloudformation-helpers'
+import { stackOutput } from '@nordicsemiconductor/cloudformation-helpers'
 import { getInput } from '@actions/core'
 
 const getRequiredInput = (input: string): string =>

@@ -343,7 +343,7 @@ rqXRfboQnoZsG4q5WTP468SQvvG5
 				iot,
 				jobId,
 				interval: 10,
-				timeoutInMinutes: timeoutInMinutes * 2,
+				timeoutInMinutes,
 			})
 		} catch {
 			console.error(chalk.red(`Timeout waiting for job to complete.`))

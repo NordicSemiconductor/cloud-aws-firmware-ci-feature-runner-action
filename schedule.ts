@@ -261,7 +261,7 @@ rqXRfboQnoZsG4q5WTP468SQvvG5
 					} else {
 						console.error(
 							chalk.red(
-								'Device did not connect within ${timeoutInMinutes} minutes.',
+								`Device did not connect within ${timeoutInMinutes} minutes.`,
 							),
 						)
 					}

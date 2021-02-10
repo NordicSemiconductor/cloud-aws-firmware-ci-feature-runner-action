@@ -33,7 +33,7 @@ import { v4 } from 'uuid'
 import { TextDecoder } from 'util'
 import { HttpRequest } from '@aws-sdk/protocol-http'
 import { stackOutput } from '@nordicsemiconductor/cloudformation-helpers'
-import { getInput } from '@actions/core'
+import { getInput, setOutput } from '@actions/core'
 
 const getRequiredInput = (input: string): string =>
 	getInput(input, { required: true })
@@ -277,6 +277,7 @@ rqXRfboQnoZsG4q5WTP468SQvvG5
 						new TextDecoder('utf-8').decode(shadow.payload),
 					)
 					console.error(chalk.green(`Device has connected.`))
+					setOutput('connected', true)
 					if (state?.reported?.dev === undefined) {
 						console.error(
 							chalk.red(`Device has not reported device information, yet.`),

@@ -109,7 +109,9 @@ const main = async () => {
 			timeoutInMinutes,
 		})
 	} catch (err) {
+		let jobIsActive = false
 		if (!/Timed out/.test(err.message)) {
+			jobIsActive = true
 			console.error(chalk.magenta('Uploading firmware...'))
 			// FIXME: remove when https://github.com/aws/aws-sdk-js-v3/issues/1800 is fixed
 			s3.middlewareStack.add(
@@ -248,15 +250,13 @@ rqXRfboQnoZsG4q5WTP468SQvvG5
 				endpoint: `https://${testEnv.endpoint}`,
 			})
 			const iotTestEnv = new IoTClient(testEnvSDKConfig)
-			let timeLeft = timeoutInMinutes * 60 - 60
 			const scheduleFOTA = async () => {
 				process.stderr.write(
 					chalk.magenta(`Checking if device has connected ... `),
 				)
 
 				const reschedule = () => {
-					timeLeft -= 10
-					if (timeLeft > 0) {
+					if (jobIsActive) {
 						setTimeout(scheduleFOTA, 10 * 1000)
 					} else {
 						console.error(
@@ -347,6 +347,7 @@ rqXRfboQnoZsG4q5WTP468SQvvG5
 			})
 		} catch {
 			console.error(chalk.red(`Timeout waiting for job to complete.`))
+			jobIsActive = false
 			await cancel({ iot, jobId })
 		}
 

@@ -60,6 +60,13 @@ inputs:
     description: "Timeout for job completion in minutes"
     default: "10"
     required: false
+outputs:
+  connected:
+    description: "Whether the device connected."
+  reportUrl:
+    description:
+      "Public URL where the Firmware CI runner publishes the result of the run
+      to."
 
 runs:
   using: "node12"

@@ -243,6 +243,7 @@ rqXRfboQnoZsG4q5WTP468SQvvG5
 				chalk.magenta('Stored job document in'),
 				chalk.blueBright('jobDocument.json'),
 			)
+			setOutput('reportUrl', jobDocument.reportUrl)
 
 			// Inject behaviour once the device connects
 			const iotDataTestEnv = new IoTDataPlaneClient({

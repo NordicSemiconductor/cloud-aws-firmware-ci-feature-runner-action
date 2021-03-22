@@ -34,7 +34,7 @@
     "@aws-sdk/protocol-http": "3.6.1",
     "@nordicsemiconductor/asset-tracker-cloud-aws": "25.0.16",
     "@nordicsemiconductor/cloudformation-helpers": "6.0.11",
-    "@nordicsemiconductor/firmware-ci-runner-aws": "5.1.17",
+    "@nordicsemiconductor/firmware-ci-runner-aws": "5.1.18",
     "node-fetch": "2.6.1",
     "uuid": "8.3.2"
   },

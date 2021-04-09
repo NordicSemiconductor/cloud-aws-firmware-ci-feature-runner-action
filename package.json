@@ -32,7 +32,7 @@
     "@aws-sdk/client-s3": "3.11.0",
     "@aws-sdk/client-sts": "3.11.0",
     "@aws-sdk/protocol-http": "3.10.0",
-    "@nordicsemiconductor/asset-tracker-cloud-aws": "26.0.7",
+    "@nordicsemiconductor/asset-tracker-cloud-aws": "26.0.8",
     "@nordicsemiconductor/cloudformation-helpers": "6.0.16",
     "@nordicsemiconductor/firmware-ci-runner-aws": "5.1.20",
     "chalk": "4.1.0",

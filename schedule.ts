@@ -100,6 +100,7 @@ const main = async () => {
 	const iot = new IoTClient(testEnvSDKConfig)
 
 	let jobInfo
+	let jobIsActive = false
 	// Job exists?
 	try {
 		jobInfo = await wait({
@@ -109,7 +110,6 @@ const main = async () => {
 			timeoutInMinutes,
 		})
 	} catch (err) {
-		let jobIsActive = false
 		if (!/Timed out/.test(err.message)) {
 			jobIsActive = true
 			console.error(chalk.magenta('Uploading firmware...'))
@@ -393,6 +393,8 @@ rqXRfboQnoZsG4q5WTP468SQvvG5
 		console.log()
 		console.log(deviceLog.join('\n'))
 	}
+
+	if (!jobIsActive) process.exit(1)
 }
 
 void main()

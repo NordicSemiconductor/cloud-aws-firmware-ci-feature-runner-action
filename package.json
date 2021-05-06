@@ -32,7 +32,7 @@
     "@aws-sdk/client-s3": "3.14.0",
     "@aws-sdk/client-sts": "3.14.0",
     "@aws-sdk/protocol-http": "3.13.1",
-    "@nordicsemiconductor/asset-tracker-cloud-aws": "27.0.19",
+    "@nordicsemiconductor/asset-tracker-cloud-aws": "27.0.20",
     "@nordicsemiconductor/cloudformation-helpers": "6.0.21",
     "@nordicsemiconductor/e2e-bdd-test-runner": "13.1.20",
     "@nordicsemiconductor/firmware-ci-runner-aws": "5.2.3",

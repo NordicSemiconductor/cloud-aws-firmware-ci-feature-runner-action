@@ -101,6 +101,7 @@ const main = async () => {
 
 	let jobInfo
 	let jobIsActive = false
+	const startTime = Date.now()
 	// Job exists?
 	try {
 		jobInfo = await wait({
@@ -280,10 +281,18 @@ rqXRfboQnoZsG4q5WTP468SQvvG5
 					console.error(chalk.green(`Device has connected.`))
 					setOutput('connected', true)
 					if (state?.reported?.dev === undefined) {
-						console.error(
-							chalk.red(`Device has not reported device information, yet.`),
-						)
-						reschedule()
+						if ((Date.now() - startTime) / 1000 / 60 > timeoutInMinutes) {
+							console.error(
+								chalk.red(
+									`Timed out waiting for device to report device information.`,
+								),
+							)
+						} else {
+							console.error(
+								chalk.red(`Device has not reported device information, yet.`),
+							)
+							reschedule()
+						}
 						return
 					}
 					// Schedule FOTA job

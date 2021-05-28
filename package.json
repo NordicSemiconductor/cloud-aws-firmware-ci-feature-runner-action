@@ -34,7 +34,7 @@
     "@aws-sdk/protocol-http": "3.15.0",
     "@nordicsemiconductor/asset-tracker-cloud-aws": "27.0.31",
     "@nordicsemiconductor/cloudformation-helpers": "6.0.24",
-    "@nordicsemiconductor/e2e-bdd-test-runner": "13.1.40",
+    "@nordicsemiconductor/e2e-bdd-test-runner": "13.1.41",
     "@nordicsemiconductor/firmware-ci-runner-aws": "5.4.13",
     "chalk": "4.1.1",
     "node-fetch": "2.6.1",

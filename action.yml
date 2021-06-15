@@ -1,21 +1,15 @@
-name: "Firmware CI Scheduler"
-description: "Schedules a CI run on Firmware CI Runner AWS"
+name: "Firmware CI feature runner"
+description:
+  "Uses @nordicsemiconductor/e2e-bdd-test-runner to run features files of a
+  firmware."
 inputs:
-  job id:
-    description: "The ID of the job to run"
+  device id:
+    description: "ID of the device the firmware belongs to (client ID)"
     required: true
   app version:
     description:
       "The version string to use for the app. This is used with the FOTA test."
     required: true
-  hex file:
-    description: "The location of the firmware to flash"
-    required: false
-    default: firmware.hex
-  fota file:
-    description: "The location of the firmware file to use for the FOTA test"
-    required: false
-    default: fota-upgrade.bin
   aws access key id:
     description: "Access Key ID for the Firmware CI Runner"
     required: true
@@ -33,17 +27,14 @@ inputs:
     description: "Stack name of the cloud backend to use"
     required: false
     default: asset-tracker
-  firmware ci device id:
-    description: "ID of the IoT Thing which runs the job"
-    required: true
-  abort on:
-    description:
-      "Abortion criteria for the Firmware CI runner, will be split by newlines."
+  feature dir:
+    description: "Location of the feature files"
     required: false
-  end on:
-    description:
-      "End criteria for the Firmware CI runner, will be split by newlines."
+    default: features
+  log dir:
+    description: "Location of the log files"
     required: false
+    default: logs
   target:
     description: "Target board to use"
     default: "nrf9160dk_nrf9160ns"
@@ -52,21 +43,6 @@ inputs:
     description: "Network to use"
     default: "ltem"
     required: false
-  sec tag:
-    description: "SecTag to use for credentials"
-    default: "42"
-    required: false
-  timeout in minutes:
-    description: "Timeout for job completion in minutes"
-    default: "10"
-    required: false
-outputs:
-  connected:
-    description: "Whether the device connected."
-  reportUrl:
-    description:
-      "Public URL where the Firmware CI runner publishes the result of the run
-      to."
 
 runs:
   using: "node12"

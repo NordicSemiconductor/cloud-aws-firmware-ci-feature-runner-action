@@ -1,21 +1,21 @@
 {
-  "name": "@nordicsemiconductor/cloud-aws-firmware-ci-schedule-action",
+  "name": "@nordicsemiconductor/cloud-aws-firmware-ci-feature-runner-action",
   "version": "0.0.0-development",
-  "description": "GitHub action that schedules a CI run on Firmware CI Runner for AWS",
+  "description": "Uses @nordicsemiconductor/e2e-bdd-test-runner to run features files of a firmware.",
   "scripts": {
-    "build": "npx ncc build schedule.ts -o build",
+    "build": "npx ncc build action.ts -o build",
     "postinstall": "husky install",
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/NordicSemiconductor/cloud-aws-firmware-ci-schedule-action.git"
+    "url": "https://github.com/NordicSemiconductor/cloud-aws-firmware-ci-feature-runner-action.git"
   },
   "bugs": {
-    "url": "https://github.com/NordicSemiconductor/cloud-aws-firmware-ci-schedule-action/issues"
+    "url": "https://github.com/NordicSemiconductor/cloud-aws-firmware-ci-feature-runner-action/issues"
   },
-  "homepage": "https://github.com/NordicSemiconductor/cloud-aws-firmware-ci-schedule-action#readme",
+  "homepage": "https://github.com/NordicSemiconductor/cloud-aws-firmware-ci-feature-runner-action#readme",
   "keywords": [
     "Cloud",
     "IoT",
@@ -26,19 +26,9 @@
   "license": "BSD-3-Clause",
   "dependencies": {
     "@actions/core": "1.4.0",
-    "@aws-sdk/client-cloudformation": "3.18.0",
-    "@aws-sdk/client-iot": "3.18.0",
-    "@aws-sdk/client-iot-data-plane": "3.18.0",
-    "@aws-sdk/client-s3": "3.18.0",
-    "@aws-sdk/client-sts": "3.18.0",
-    "@aws-sdk/protocol-http": "3.18.0",
-    "@nordicsemiconductor/asset-tracker-cloud-aws": "27.1.1",
-    "@nordicsemiconductor/cloudformation-helpers": "6.0.26",
     "@nordicsemiconductor/e2e-bdd-test-runner": "13.1.48",
-    "@nordicsemiconductor/firmware-ci-runner-aws": "5.4.23",
-    "chalk": "4.1.1",
-    "node-fetch": "2.6.1",
-    "uuid": "8.3.2"
+    "aws-sdk": "2.927.0",
+    "chalk": "4.1.1"
   },
   "devDependencies": {
     "@commitlint/cli": "12.1.4",
@@ -46,8 +36,6 @@
     "@nordicsemiconductor/asset-tracker-cloud-code-style": "9.0.4",
     "@nordicsemiconductor/eslint-config-asset-tracker-cloud-typescript": "7.0.25",
     "@types/node": "15.12.1",
-    "@types/node-fetch": "2.5.10",
-    "@types/uuid": "8.3.0",
     "@vercel/ncc": "0.28.6",
     "eslint": "7.28.0",
     "husky": "6.0.0",

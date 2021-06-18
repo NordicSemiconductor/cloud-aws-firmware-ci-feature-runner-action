@@ -37,7 +37,7 @@
     "@nordicsemiconductor/eslint-config-asset-tracker-cloud-typescript": "7.0.25",
     "@types/node": "15.12.1",
     "@vercel/ncc": "0.28.6",
-    "eslint": "7.28.0",
+    "eslint": "7.29.0",
     "husky": "6.0.0",
     "lint-staged": "11.0.0",
     "pinst": "2.1.6",

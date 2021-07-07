@@ -27,7 +27,7 @@
   "dependencies": {
     "@actions/core": "1.4.0",
     "@nordicsemiconductor/e2e-bdd-test-runner": "14.0.9",
-    "aws-sdk": "2.940.0",
+    "aws-sdk": "2.941.0",
     "chalk": "4.1.1"
   },
   "devDependencies": {

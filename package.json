@@ -38,7 +38,7 @@
     "@types/node": "15.12.1",
     "@vercel/ncc": "0.31.1",
     "eslint": "8.0.1",
-    "husky": "7.0.2",
+    "husky": "7.0.4",
     "lint-staged": "11.2.3",
     "pinst": "2.1.6",
     "prettier": "2.4.1",

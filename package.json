@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@nordicsemiconductor/asset-tracker-cloud-code-style": "11.0.6",
-    "@types/node": "16.11.19",
+    "@types/node": "16.11.20",
     "@vercel/ncc": "0.33.1"
   },
   "lint-staged": {

@@ -1,14 +1,14 @@
+import { getInput } from '@actions/core'
 import {
-	FeatureRunner,
-	ConsoleReporter,
 	awsSdkStepRunners,
+	ConsoleReporter,
+	FeatureRunner,
 	storageStepRunners,
 } from '@nordicsemiconductor/e2e-bdd-test-runner'
 import * as chalk from 'chalk'
-import { firmwareCIStepRunners } from './steps/firmwareCI'
-import { getInput } from '@actions/core'
 import * as fs from 'fs'
 import * as path from 'path'
+import { firmwareCIStepRunners } from './steps/firmwareCI'
 
 const getRequiredInput = (input: string): string =>
 	getInput(input, { required: true })

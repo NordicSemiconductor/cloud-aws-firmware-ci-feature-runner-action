@@ -39,7 +39,7 @@ jobs:
       - name: Check source code with eslint
         run:
           npx eslint --fix --ext .js,.ts,.jsx,.tsx --ignore-pattern
-          commitlint.config.js --ignore-path .gitignore ./
+          commitlint.config.js ./
 
       - name: Commit changes
         run: |

@@ -24,7 +24,7 @@
   "license": "BSD-3-Clause",
   "dependencies": {
     "@actions/core": "1.9.1",
-    "@nordicsemiconductor/e2e-bdd-test-runner": "15.1.73",
+    "@nordicsemiconductor/e2e-bdd-test-runner": "15.1.74",
     "aws-sdk": "2.1164.0",
     "chalk": "4.1.2"
   },

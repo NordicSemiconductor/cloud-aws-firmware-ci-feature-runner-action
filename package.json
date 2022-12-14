@@ -27,7 +27,7 @@
     "chalk": "4.1.2"
   },
   "devDependencies": {
-    "@nordicsemiconductor/asset-tracker-cloud-code-style": "11.0.157",
+    "@nordicsemiconductor/asset-tracker-cloud-code-style": "11.0.158",
     "@types/node": "18.11.15",
     "@vercel/ncc": "0.36.0"
   },
